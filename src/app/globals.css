@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+    @apply max-w-screen-2xl mx-auto bg-white my-2
+}
+
+.btn {
+    @apply bg-primary text-white px-4 py-3 text-xl border-2 border-primary hover:bg-transparent transition-all hover:border-white focus:outline-none focus:border-primary focus:bg-transparent focus:text-primary inline-flex items-center justify-center
+}
+
+.nav-links {
+    @apply hover:font-semibold text-xl w-28 inline-flex justify-center items-center focus:outline-none focus:font-semibold
+}
+
+.nav-links:last-child {
+    @apply hover:font-normal w-32 border-2 border-primary hover:bg-transparent hover:text-primary transition-all
+}
+
+.responsiveNav {
+    @apply fixed top-[75px] py-2 left-0 w-full bg-white flex flex-col lg:top-[95px] gap-8
+}
+
+.btnC {
+    @apply bg-primary px-4 py-2 text-white focus:outline-none focus:border-primary focus:bg-transparent focus:text-primary
+}
+
+.heading {
+    @apply inline-flex justify-center items-center w-full text-7xl py-2 mt-6 bg-white shadow-xl h-full relative
+}
+
+iframe {
+    @apply aspect-video w-64 h-fit rounded-lg border-2 shadow-lg
+}
