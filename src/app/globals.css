@@ -31,5 +31,9 @@ section {
 }
 
 iframe {
-    @apply aspect-video w-64 h-fit rounded-lg border-2 shadow-lg
+    @apply aspect-video w-full rounded-lg border-2 shadow-lg h-full
+}
+
+.clients-box {
+    @apply bg-primary w-[295px] relative flex flex-col items-center justify-center rounded-xl shadow-lg
 }

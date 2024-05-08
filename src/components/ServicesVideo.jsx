@@ -3,16 +3,21 @@
 import React, { useRef } from 'react';
 import YouTube from 'react-youtube';
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ videoId, value }) => {
     const playerRef = useRef(null);
+
 
     const onReady = (event) => {
         // Mute the player
-        event.target.mute();
-        event.target.seekTo(15)
 
-        // Start playing the video
-        event.target.playVideo();
+        if (value === 1) {
+            event.target.seekTo(15)
+            event.target.mute();
+            // Start playing the video
+            event.target.playVideo();
+        }
+
+
     };
 
     const onEnd = (event) => {
@@ -21,14 +26,17 @@ const VideoPlayer = () => {
         event.target.playVideo();
     };
 
+
+
+
     return (
         <YouTube
-            videoId="BfrDihJrjbE"
+            videoId={videoId}
             opts={{
                 height: '270',
                 width: '170',
                 playerVars: {
-                    autoplay: 1,
+                    autoplay: value,
                     controls: 0,
                 },
             }}

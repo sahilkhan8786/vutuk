@@ -2,7 +2,7 @@
 import { logoBlack } from '@/assets/landingPage'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Bebas_Neue, Poppins } from 'next/font/google'
 import { cross, ham } from '@/assets/icons'
@@ -20,6 +20,10 @@ export default function Navbar() {
 
     const path = pathName.split('/')[1];
 
+    useEffect(() => {
+        setActiveLink(activeLink)
+    }, [])
+
     function activeLinkHandler(isActive) {
         setActiveLink(isActive)
         setShowNav(false)
@@ -30,8 +34,8 @@ export default function Navbar() {
     }
 
     return (
-        <header className='bg-white shadow-md'>
-            <nav className='max-w-screen-2xl mx-auto  flex items-center justify-between px-4'>
+        <header className='bg-white shadow-md z-50 w-full fixed top-0 left-0 '>
+            <nav className='max-w-screen-2xl mx-auto  flex items-center justify-between px-4 '>
                 <Image src={logoBlack} width={171} height={88} alt='logo' className='cursor-pointer  h-[70px]  lg:h-[88px] w-auto' priority />
 
                 <menu className={`${showNav ? 'responsiveNav' : 'hidden'}  lg:static lg:flex-row lg:w-fit  items-center justify-center  ${poppins.className} font-normal lg:flex`}>

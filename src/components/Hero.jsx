@@ -15,7 +15,7 @@ const openS = Open_Sans({ subsets: ['latin'], weight: ['400'] });
 
 export default function Hero() {
     return (
-        <section className='mt-12 flex py-4 px-4 shadow-md rounded-md flex-col-reverse lg:flex-row'>
+        <section className='xl:mt-[120px] mt-[80px] flex py-4 px-4 shadow-md rounded-md flex-col-reverse lg:flex-row'>
             <div className='flex flex-col   xl:mt-12'>
                 <p className={`${poppins.className} mt-2 xl:mt-12 whitespace-nowrap text-xl mb-4`}>We are a team of professional</p>
                 <h1 className={`${bebas.className} text-5xl whitespace-nowrap mb-4 xl:text-7xl`}>Graphic Designers</h1>
